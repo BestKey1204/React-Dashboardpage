@@ -1,0 +1,420 @@
+// Here you can add other styles
+
+@font-face {
+     font-family: 'Proxima Nova Semibold';
+     src: url('/assets/font/FontsFree-Net-Proxima-Nova-Sbold.otf');
+     font-style: normal;
+ }
+
+body {
+  background: white;
+  font-family: "Proxima Nova";
+}
+
+#root .main {
+  display: flex;
+  flex-direction: column;
+
+  >div:first-child {
+    height: 46px;
+    display: none;
+  }
+
+  >div:last-child {
+    flex: auto;
+    padding: 0;
+    display: flex;
+  }
+}
+
+.progress {
+  margin-bottom: 10px;
+}
+
+$border-color: #c8ced3;
+
+#Campaigns {
+  width: 100%;
+  display: flex;
+  background-color: white;
+  .message-list-container {
+    line-height: 20px;
+    border-right: 1px solid $border-color;
+    display: flex;
+    flex-direction: column;
+    .control-container {
+      padding: 8px;
+      display: flex;
+      align-items: center;
+
+      >:first-child {
+        color: white;
+        background-image: linear-gradient(180deg,#2399f0 0,#107bea);
+        border-color: #1c89ed;
+        outline: none;
+//        font-weight: bolder;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-right: 10px;
+      }
+
+      > :last-child {
+        >button {
+          background-color: #f5f6f8;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          margin-left: 19px;
+          font-size: 13px;
+          
+          width: 101px;
+          text-align: left;
+          position: relative;
+        }
+      }
+    }
+
+    .message-list {
+      flex: auto;
+      overflow-y: auto;
+      width: 278px;
+
+      .message-item {
+        cursor: pointer;
+        height: 95px;
+        padding: 10px 12px;
+        border-top: 1px solid $border-color;
+        border-left: 3px solid rgb(239, 245, 254);
+        background: rgb(239, 245, 254);
+        overflow: hidden;
+        // display: flex;
+        // flex-direction: column;
+
+        .title-bar {
+          display: flex;
+          justify-content: space-between;
+
+          .message-title {
+           font-weight: bolder;
+            margin-bottom: 5px;
+          }
+
+          .message-date {
+            font-size: 12px;
+            font-family: "Proxima Nova Semibold";
+            padding-right: 22px;
+            color: rgba(0,27,72,.32);
+          }
+        }
+
+        .message-simple {
+          font-family: "Proxima Nova";
+          font-size: 13.5px;
+          line-height: 1.2;
+          flex: auto;
+          white-space: pre-wrap;
+          height: 43px;
+          overflow: hidden;
+          color: rgba(0,27,72,.54);
+        }
+      }
+
+      .message-item.selected {
+        border-left: 3px solid #1f8fee;
+      }
+
+      .message-item:last-child {
+        border-bottom: 1px solid $border-color;
+      }
+    }
+  }
+
+  .message-container {
+    flex: auto;
+    // padding: 5px;
+    .message-status-bar {
+      font-size: 12px;
+      background-color: #e7f6e9;
+      color: #24ae36;
+      padding: 2px 5px;
+      width: 100%;
+    }
+
+    .message-panel {
+      padding: 10px 15px;
+
+      >div {
+        margin-bottom: 15px;
+      }
+
+      .message-control-bar {
+        display: flex;
+        justify-content: space-between;
+
+        .message-control-items {
+          i {
+            margin-left: 20px;
+          }
+        }
+      }
+
+      .message-title {
+        span {
+
+          border-radius: 10px;
+          border: 1px solid $border-color;
+          padding: 3px 10px;
+        }
+      }
+
+      .message-content {
+        border: 1px solid $border-color;
+        border-radius: 5px;
+        padding: 10px;
+        white-space: pre-wrap;
+        color: gray;
+        font-family: "Proxima Nova";
+      }
+
+      .message-analytics-content {
+        display: flex;
+
+        >div {
+          margin-right: 15px;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+
+          >span:first-child {
+            margin-top: 7px;
+            margin-bottom: -9px;
+            color: rgba(0,27,72,.54);
+          }
+
+          >span:last-child {
+            font-size: 30px;
+            color: rgba(0,27,72,.54);
+          }
+        }
+        .message-totalsent {
+          font-size: 28px;
+          color: #2399f0 !important;
+        }
+      }
+
+      .message-progress-bar {
+        max-width: 300px;
+
+        >div:last-child {
+          display: flex;
+          font-weight: 300;
+          justify-content: space-between;
+          color: #2399f0 !important;
+        }
+      }
+
+    }
+
+  }
+}
+
+img {
+  vertical-align: initial;
+}
+
+html:not([dir="rtl"]) .sidebar {
+  margin-left: -215px;
+}
+
+.app-header {
+  justify-content: start;
+}
+
+.app-header .navbar-brand {
+  width: auto;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  display: none;
+}
+
+.breadcrumb>.breadcrumb-item:first-child {
+  display: none;
+}
+
+.breadcrumb {
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb-item.active {
+  color: rgba(0,14,36,.87);
+  font-size: 24px;
+    line-height: 28px;
+    font-family: "Proxima Nova Semibold";
+//    font-weight: 400;
+}
+
+.main {
+  border-top: 1px solid $border-color;
+}
+
+.app-header {
+  background: transparent;
+  border: none;
+}
+
+.app-body .sidebar {
+  padding-top: 58px;
+  margin-top: -58px;
+}
+
+.breadcrumb-item.active {
+  color: rgba(0,14,36,.87);
+    font-size: 24px;
+    line-height: 28px;
+    font-family: "Proxima Nova Semibold";
+    font-weight: 400;
+}
+
+.sidebar {
+  background: #dce4eb;
+
+  // margin-left: 0px !important;
+
+  .nav-link {
+    color: #78879f;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    
+  }
+  .nav-link.hover{
+    color: #78879f;
+  }
+
+  .nav-item {
+    line-height: 1;
+    font-weight: 500;
+  }
+
+  .nav-item:nth-child(2) a::after,
+  .nav-item:nth-child(3) a::after,
+  .nav-item:nth-child(4) a::after,
+  .nav-item:nth-child(5) a::after,
+  .nav-item:nth-child(6) a::after,
+    {
+    position: absolute;
+    right: 19px;
+    top: 17px;
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: #80808085;
+    z-index: 10;
+  }
+
+  .nav-item a.active::after {
+    background-color: white;
+  }
+
+  .sidebar-nav {
+    width: 245px;
+  }
+
+  .nav {
+    width: 220px;
+    margin-left: 9px;
+    font-size: 16px;
+  line-height: 28px;
+  font-family: "Proxima Nova Semibold";
+//  font-weight: 400;
+  }
+
+  .nav-link.active {
+    background: #1f8fee;
+    font-size: 16px;
+
+  }
+
+  .nav-link.active .nav-icon {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+.sidebar-fixed .app-header+.app-body .sidebar {
+  height: 100vh
+}
+
+.btn-info:focus,
+.btn-info.focus {
+  box-shadow: none;
+}
+
+.help-icon {
+  height: 14px;
+  background-image:
+    url('/assets/img/icons/help_black.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.sidebar .nav-link:hover .help-icon {
+  background-image:
+    url('/assets/img/icons/help.png');
+}
+
+.flag-select img {
+  width: 1.1em;
+  height: 1.2em;
+}
+
+.sidebar-fixed .sidebar {
+  width: 240px !important;
+}
+
+
+.breadcrumb {
+  padding-left: 40px;
+  line-height: 28px;
+  font-family: "Proxima Nova Semibold";
+//  font-weight: 400;
+}
+
+.dropdown-toggle::after {
+  position: absolute;
+  right: 6px;
+  top: 13px;
+}
+
+@media (min-width: 992px) {
+
+  html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed .main,
+  html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed .app-footer,
+  html:not([dir="rtl"]) .sidebar-show.sidebar-fixed .main,
+  html:not([dir="rtl"]) .sidebar-show.sidebar-fixed .app-footer {
+    margin-left: 240px;
+  }
+}
+
+@media (min-width: 768px) {
+  html:not([dir="rtl"]) .sidebar-md-show.sidebar-fixed .main,
+  html:not([dir="rtl"]) .sidebar-md-show.sidebar-fixed .app-footer,
+  html:not([dir="rtl"]) .sidebar-show.sidebar-fixed .main,
+  html:not([dir="rtl"]) .sidebar-show.sidebar-fixed .app-footer {
+    margin-left: 240px;
+  }
+}
+
+@media (min-width: 576px) {
+  html:not([dir="rtl"]) .sidebar-md-show.sidebar-fixed .main,
+  html:not([dir="rtl"]) .sidebar-md-show.sidebar-fixed .app-footer,
+  html:not([dir="rtl"]) .sidebar-show.sidebar-fixed .main,
+  html:not([dir="rtl"]) .sidebar-show.sidebar-fixed .app-footer {
+    margin-left: 240px;
+  }
+}
